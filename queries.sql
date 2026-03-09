@@ -38,7 +38,7 @@ WHERE COMMUNITY_AREA_NUMBER IN
     LIMIT 1
 );
 
--- Per capita income for community with the highest crime rates
+-- Per capita income for community with the lowest crime rates
 
 SELECT COMMUNITY_AREA_NAME, PER_CAPITA_INCOME
 FROM CENSUS_DATA
@@ -50,6 +50,16 @@ WHERE COMMUNITY_AREA_NUMBER IN
     ORDER BY COUNT(*) ASC
     LIMIT 1
 );
+
+-- Percentage of crimes that are theft or battery
+SELECT 
+    (SELECT COUNT(*) 
+     FROM CRIME_DATA 
+     WHERE PRIMARY_TYPE IN ('THEFT', 'BATTERY')) * 100.0
+    /
+    (SELECT COUNT(*) 
+     FROM CRIME_DATA) 
+AS percentage_theft_battery;
 
 
 

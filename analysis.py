@@ -97,7 +97,13 @@ plt.tight_layout()
 plt.savefig("figures/crime_vs_income.png")
 plt.show()
 
+
 con.close()
+
+
+
+
+
 
 
 
