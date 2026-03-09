@@ -1,4 +1,4 @@
-# Chicago Crime Analysis (SQL + Python)
+# Chicago Crime Data Analysis Using SQL and Python
 Analysis of Chicago crime and socioeconomic datasets using SQL and Python.
 
 ## Introduction
@@ -60,4 +60,8 @@ the lowest crime rate, Forest Glen, with a per capita income
 of 44,164. However, there is not a perfectly linear relationship and 
 the data has considerable variability.
 
+## Running the Project
 
+The database used in this project can be recreated using `database_setup.py`.  
+The analysis and visualisations can then be produced by running `analysis.py`.
+The SQL queries used in the analysis are also included in `queries.sql`.
